@@ -29,13 +29,13 @@ public class ToDoController {
     }
 
     // get tasks by created at date: YYYY/MM/DD
-    @GetMapping(path="/tasks/{createdAt}")
+    @GetMapping(path="/createdtasks/{createdAt}")
     public Iterable<ToDo> getTasksByCreatedAt(@PathVariable("createdAt") String createdAt){
         return this.todoRepository.getListByCreatedAt(createdAt);
     }
 
     // get tasks by completed at date: YYYY/MM/DD
-    @GetMapping(path="/tasks/{completedAt}")
+    @GetMapping(path="/completedtasks/{completedAt}")
     public Iterable<ToDo> getTasksByCompletedAt(@PathVariable("completedAt") String completedAt){
         return this.todoRepository.getListByCompletedAt(completedAt);
     }
@@ -119,4 +119,19 @@ public class ToDoController {
         ToDo newTask = this.todoRepository.save(toDo);
         return newTask;
     }
+
+    // delete task by id
+    @DeleteMapping(path="/task/{id}")
+    public String deleteTask(
+        @PathVariable("id") Integer id){
+            Optional<ToDo> taskOptional = this.todoRepository.findById(id);
+
+            if(!taskOptional.isPresent()){
+                return null;
+            }
+            ToDo deleteTask = taskOptional.get();
+            this.todoRepository.delete(deleteTask);
+            return "Task Id: "+ deleteTask.getId() + " Title: " + deleteTask.getTitle() + " Was Deleted!";
+    }
+
 }
