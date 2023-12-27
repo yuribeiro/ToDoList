@@ -109,7 +109,7 @@ public class ToDoController {
         }
 
         ToDo updatedTaskStatus = updateTaskStatus;
-        return "Task Id: " + updatedTaskStatus.getId() + " Title: " + updatedTaskStatus.getTitle() + " Was updated to: " + updatedTaskStatus.getStatus();
+        return "Task Id: " + updateTaskStatus.getId() + " Title: " + updatedTaskStatus.getTitle() + " Was updated to: " + updatedTaskStatus.getStatus();
 
     }
 
