@@ -11,13 +11,13 @@ INSERT INTO TASKSTODO (TITLE, DESCRIPTION, CREATED_AT, completed_AT, STATUS)
 VALUES ('Schedule a doctor appointment', 'Book an annual check-up with the doctor', '2023-01-18', NULL, 'in-progress');
 
 INSERT INTO TASKSTODO (TITLE, DESCRIPTION, CREATED_AT, completed_AT, STATUS) 
-VALUES ('Clean the room', 'Organize and thoroughly clean the room', '2023-01-19', '2023-01-19', 'completed');
+VALUES ('Clean the room', 'Organize and thoroughly clean the room', '2023-01-19', '2023-02-19', 'completed');
 
 INSERT INTO TASKSTODO (TITLE, DESCRIPTION, CREATED_AT, completed_AT, STATUS) 
 VALUES ('Exercise practice', 'Go to the gym or do home exercises for at least 30 minutes', '2023-01-20', NULL, 'in-progress');
 
 INSERT INTO TASKSTODO (TITLE, DESCRIPTION, CREATED_AT, completed_AT, STATUS) 
-VALUES ('Read a chapter of the current book', 'Dedicate 30 minutes to reading the book before sleeping', '2023-01-2 21:00:00', NULL, 'pending');
+VALUES ('Read a chapter of the current book', 'Dedicate 30 minutes to reading the book before sleeping', '2023-01-02', NULL, 'pending');
 
 INSERT INTO TASKSTODO (TITLE, DESCRIPTION, CREATED_AT, completed_AT, STATUS) 
 VALUES ('Study a new language', 'Practice vocabulary and grammar for 1 hour', '2023-01-22', '2023-01-22', 'completed');
